@@ -1,0 +1,27 @@
+
+### 
+
+POST http://localhost:7071/api/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+{
+    hello
+    world
+}
+
+###
+
+POST https://explore-functions-stephen.azurewebsites.net/api/graphql
+Content-Type: application/json
+X-REQUEST-TYPE: GraphQL
+
+{
+    hello
+    world
+}
+
+
+###
+
+GET http://localhost:7071/api/getJsonPlaceholderUsers
