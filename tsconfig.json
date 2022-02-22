@@ -1,16 +1,26 @@
 {
   "compilerOptions": {
-    "module": "CommonJS",
-    "target": "ES2021",
     "outDir": "dist",
     "rootDir": ".",
+    "baseUrl": ".",
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": false,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "baseUrl": ".",
     "esModuleInterop": true,
-    "moduleResolution": "node"
-  }
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "module": "CommonJS",
+    "target": "ES2021",
+    "allowJs": true,
+    "paths": {
+      "@graphql-types@": [
+        "node_modules/@types/graphql-let/__generated__/__types__"
+      ],
+      "@components/*": ["components/*"]
+    }
+  },
+  "include": ["graphql.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules", ".cache"]
 }

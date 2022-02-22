@@ -1,24 +1,18 @@
-import { ApolloServer, gql } from 'apollo-server-azure-functions';
-import { makeExecutableSchema } from '@graphql-tools/schema';
-
-const typeDefs = gql`
-  type Query {
-    hello: String!
-    world: String!
-  }
-`;
-
-const resolvers = {
-  Query: {
-    hello: () => 'Hello from our GraphQL backend!',
-    world: () => 'Hello world',
-  },
-};
-
-const schema = makeExecutableSchema({ typeDefs, resolvers });
+import { ApolloServer } from 'apollo-server-azure-functions';
+import {
+  getCommentsOfPostsLoader,
+  getPostsOfUserLoader,
+} from './graphql/dataloader';
+import { schema } from './graphql/schema';
 
 const server = new ApolloServer({
   schema,
+  context: {
+    loaders: {
+      getPostsOfUserLoader: getPostsOfUserLoader(),
+      getCommentsOfPostLoader: getCommentsOfPostsLoader(),
+    },
+  },
 });
 
 export default server.createHandler({

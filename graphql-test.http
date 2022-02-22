@@ -6,8 +6,15 @@ Content-Type: application/json
 X-REQUEST-TYPE: GraphQL
 
 {
-    hello
-    world
+    users {
+        id
+        posts {
+            id
+            comments {
+                id
+            }
+        }
+    }
 }
 
 ###

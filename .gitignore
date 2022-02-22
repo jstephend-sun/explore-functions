@@ -42,3 +42,7 @@ venv.bak/
 __pycache__/
 *.py[cod]
 *$py.class
+
+*.graphql.d.ts
+*.graphqls.d.ts
+.cache

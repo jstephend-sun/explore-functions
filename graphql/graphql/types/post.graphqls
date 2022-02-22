@@ -1,0 +1,7 @@
+type Post {
+  userId: ID!
+  id: ID!
+  title: String!
+  body: String!
+  comments: [Comment]
+}

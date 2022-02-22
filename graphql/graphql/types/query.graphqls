@@ -1,0 +1,14 @@
+type Query {
+  posts: [Post]
+  users(orderBy: OrderBy = ID_ASC): [User]
+  comments: [Comment]
+}
+
+enum OrderBy {
+  ID_DESC,
+  ID_ASC
+}
+
+# type Mutation {
+
+# }

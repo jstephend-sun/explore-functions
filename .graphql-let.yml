@@ -1,0 +1,5 @@
+schema: '**/*.graphqls'
+documents: '**/*.graphql'
+plugins:
+  - typescript-operations
+cacheDir: .cache

@@ -5,3 +5,7 @@
 local.settings.json
 test
 getting_started.md
+
+*.graphql.d.ts
+*.graphqls.d.ts
+.cache
