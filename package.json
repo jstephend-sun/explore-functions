@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "codegen": "graphql-let",
-    "build": "tsc",
+    "build": "npm run codegen && tsc",
     "watch": "tsc --w",
     "prestart": "npm run build && func extensions install",
     "start:host": "func start",
